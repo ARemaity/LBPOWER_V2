@@ -1,0 +1,28 @@
+admin@gmail.com		 	944620  admin
+
+just4uroumieh@gmail.com  	944620  supplier
+johnnycash@gmail.com     	aA12345 supplier
+bibsroumieh94@gmail.com  	480381  supplier
+71310010@students.liu.edu.lb    aA12345	supplier
+abaher@air-blog.com		aA12345 supplier
+peterpan@safe-planet.com	653727	supplier
+avril@rockmailgroup.com		892085	supplier
+
+johnnyh@air-blog.com		aA12345	client for 71310010@students.liu.edu.lb
+71310004@students.liu.edu.lb    aA12345 client for 71310010@students.liu.edu.lb
+
+bibsroumieh@gmail.com    	aA12345 client for bibsroumieh94@gmail.com
+danygh@air-blog.com		aA12345	client for bibsroumieh94@gmail.com
+
+lejipadevi@theskymail.com       aA12345	client for just4uroumieh@gmail.com
+ibrahimr@air-blog.com           aA12345	client for just4uroumieh@gmail.com
+
+aminsulayman@air-blog.com	aA12345	client for abaher@air-blog.com
+alisulayman@air-blog.com	aA12345	client for abaher@air-blog.com
+
+yseyed@air-blog.com		aA12345	client for peterpan@safe-planet.com
+ahijezi@safe-planet.com		aA12345 client for peterpan@safe-planet.com
+
+lassyf@air-blog.com		aA12345	client for johnnycash@gmail.com
+mscott@air-blog.com		aA12345	client for johnnycash@gmail.com
+
