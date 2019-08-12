@@ -115,7 +115,7 @@ include("../DBConnect.php");
 <?php
 if(isset($_POST['submit'])){
 $sql="update complaint
-	  set cstatus = '".$_POST['status']."'
+	  set st = '".$_POST['status']."'
 	  where id='".$_GET['id']."'";
 $result = mysqli_query($connect,$sql);
 echo "<script type='text/javascript'>alert('Updated');</script>";

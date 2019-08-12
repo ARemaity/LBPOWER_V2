@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-
+<?php
+session_start();
+ ?>
 <html lang="en">
 
 <head>
@@ -37,8 +39,11 @@ if(isset($_SESSION['cname']) || isset($_SESSION['admin']))
 
 $message = '';
 include("DBConnect.php");
-
+$plus="";
 if(isset($_POST['submit'])){
+
+///get the data of the speceific user by the enetered email from tbl"pass" and role from table person "1" for supplier and "2" for the admin
+
 	 $sql ="select role, person.email, status, password
 			from person, pass
 			where person.email='".$_POST['email']."'
@@ -49,11 +54,16 @@ if(isset($_POST['submit'])){
 	$count = mysqli_num_rows($statement);
 	if($count > 0)
 	{
+
+
+		$plus="entered Count ";
 			if($row['status'] == 1)
 			{
 				if(password_verify($_POST["pass"], $row["password"]))
 				//if($row["user_password"] == $_POST["user_password"])
 				{
+					
+					$plus+="the password is true ";
 						if($_SESSION['role']==1){
 
 							$getid =mysqli_query($connect,"select supplier.id as ids from supplier,person where supplier.PID=person.PID AND person.email= '".$_POST['email']."'");
@@ -114,7 +124,8 @@ if(isset($_POST['submit'])){
 		$message = "<script type='text/javascript'>alert('Email address doesnt exist, please try again');</script>";
 		echo $message;
 	}	 
-	
+	// $messages = "<script type='text/javascript'>alert('"+$plus+"');</script>";
+	// echo $messages;
 	mysqli_close($connect);
 }
 ?>

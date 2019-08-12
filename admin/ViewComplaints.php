@@ -160,8 +160,20 @@ include("../DBConnect.php");
         <tr>
             <td><?php echo $row['complaint_type']; ?></td>
             <td><?php echo $row['detials']; ?></td>
-            <td><?php echo $row['sender_type']; ?></td>
-			<td><?php echo $row['cstatus']; ?></td>
+            <td><?php if($row['sender_type']==1){
+        
+        
+        
+        echo "Client"; }else
+        {
+          echo "Supplier";
+        } ?></td>
+			<td><?php echo $row["st"];
+          ?>
+        
+      
+      
+      </td>
 			<?php $query="../admin/UpdateComplaint.php?id=".$row['id'];
 			echo "<td width='50'> <a href=".$query.">Update</a></td>"; 
 			?>
