@@ -72,7 +72,7 @@ session_start();
 						FROM person, supplier, pass
 						WHERE person.email= '" . $_POST['email'] . "'
 						AND person.email=pass.email
-						AND Supplier.PID=Person.PID
+						AND supplier.PID=Person.PID
 						AND supplier.SID=pass.SID";
 						$result = mysqli_query($connect, $sql2);
 						$row2 = mysqli_fetch_assoc($result);
@@ -85,8 +85,12 @@ session_start();
 						$reswelcome = mysqli_query($connect, $welcome);
 						if (mysqli_num_rows($reswelcome) < 1) {
 							echo "<script type='text/javascript'>alert('Welcome supplier " . $_SESSION['name'] . ", to LBPower System. It seems that you dont have users');</script>";
+						}else{
+								header("refresh:1;url=supplier/supplierdash.php");
+
+
 						}
-						header("refresh:1;url=supplier/supplierdash.php");
+					
 					} else if ($_SESSION['role'] == 2) {
 						$sql2 = "SELECT person.email, role, fname, admin.PID
 						FROM person, admin, pass

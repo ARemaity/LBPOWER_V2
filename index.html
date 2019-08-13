@@ -112,9 +112,9 @@
 
 
 
-								<li class="nav-item">
-									<a class="btn btn-primary js-tilt"   href="login.php"  role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span>login</span></a>
-								</li>
+								<li class="nav-item mt-2">
+										<a class="btn btn-primary js-tilt"   data-toggle="modal" data-target="#myModal"  role="button" data-tilt-perspective="300" data-tilt-speed="700" data-tilt-max="24"><span style="color: #ffffff;">login</span></a>
+									</li>
 							</ul>
 						</div>
 					</nav>
@@ -151,7 +151,21 @@
 
 		<div id="particles-js" class="min-height"></div>
 	</div>
-
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="myModalLabel">Choose login Type</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                </div>
+                <div class="modal-body">
+                      <a class="btn btn-primary" href="login.html">Client</a>
+                      <a class="btn btn-primary" href="login.php">Admin/Supplier</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
 	<div class="section z-bigger">
 
 
