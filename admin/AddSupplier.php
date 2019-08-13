@@ -42,7 +42,8 @@ include("../DBConnect.php");
 
 </head>
 
-<body id="page-top">
+<body id="page-top" >
+
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
@@ -108,8 +109,8 @@ include("../DBConnect.php");
       </li>
     </ul>
 
-    <div id="content-wrapper" class="bg-dark">
-
+    <div id="content-wrapper"  class="bg-dark">
+<!-- This is the main  wrapper -->
       <div class="container-fluid">
 
         <!-- Breadcrumbs-->
@@ -362,6 +363,7 @@ if(isset($_GET['submit'])){	//	page submitted
       </div>
     </div>
   </div>
+  
 
   <!-- Bootstrap core JavaScript-->
   <script src="../vendor/jquery/jquery.min.js"></script>
@@ -431,6 +433,20 @@ myInput.onkeyup = function() {
   
 }
 </script>
+
+<!-- <script>
+            var myVar;
+            
+            function myFunction() {
+              myVar = setTimeout(showPage, 2000);
+            }
+            
+            function showPage() {
+              document.querySelector(".loading").style.display = "none";
+              document.getElementById("main-content").style.display = "block";
+            }
+
+            </script> -->
 </body>
 
 </html>

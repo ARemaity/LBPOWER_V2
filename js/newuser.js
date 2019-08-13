@@ -24,11 +24,10 @@ document.getElementById("register").addEventListener("click", function () {
     document.getElementById("repassword").innerHTML = "";
 
   } else {
-    console.log("hi");
+   
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function success(userData){
-        console.log("it enter hahaha")
           uid=userData.uid;
           var xhr = new XMLHttpRequest();
 
@@ -47,7 +46,6 @@ document.getElementById("register").addEventListener("click", function () {
       // Handle Errors here.
 
       //errorExist = "TRUE";
-console.log("she enter the error field");
       var errorCode = error.code;
       var errorMessage = error.message;
       window.alert("Error : " + errorMessage);

@@ -138,8 +138,12 @@ if(password_verify($_POST["OldPass"], $row["password"])){
 	//	If the sql returns an error
 	if(!$result || !$result2)
 			die("Something went wrong");
-	else
-			echo "<script type='text/javascript'>alert('Password Updated, please login');</script>";
+  else
+  
+  echo "<div class='alert alert-success'>
+  <strong>Success!</strong> 'Password Updated, please login'
+</div>";
+			//echo "<script type='text/javascript'>alert('Password Updated, please login');</script>";
 			header("refresh:1;url=../logout.php");
 }
 	else{

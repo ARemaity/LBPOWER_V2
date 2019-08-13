@@ -204,6 +204,11 @@ while ($row= mysqli_fetch_assoc($result))  {
           <span>View Users</span></a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="../map/user-map.php">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <span> &nbsp;&nbsp; Map</span></a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="adduser.php">
           <i class="fa fa-user-plus"></i>
           <span>Add User</span></a>

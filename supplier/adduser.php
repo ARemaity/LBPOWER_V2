@@ -14,6 +14,9 @@
 
   <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
 
   <!-- Page level plugin CSS-->
   <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
@@ -38,8 +41,7 @@
     <ul class="navbar-nav ml-auto ml-md-0">
 
       <li class="nav-item dropdown no-arrow">
-        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user-circle fa-fw"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
@@ -67,6 +69,11 @@
         <a class="nav-link" href="ViewUsers.php">
           <i class="fas fa-fw fa-table"></i>
           <span>View Users</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../map/user-map.php">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <span> &nbsp;&nbsp; Map</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="adduser.php">
@@ -113,15 +120,13 @@
                 <div class="form-row">
                   <div class="col-md-6">
                     <div class="form-label-group">
-                      <input type="text" id="fname" name='fname' class="form-control" placeholder="First Name"
-                        required="required">
+                      <input type="text" id="fname" name='fname' class="form-control" placeholder="First Name" required="required">
                       <label for="fname">First name</label>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-label-group">
-                      <input type="text" id="lname" name="lname" class="form-control" placeholder="Last Name"
-                        required="required">
+                      <input type="text" id="lname" name="lname" class="form-control" placeholder="Last Name" required="required">
                       <label for="lname">Last name</label>
                     </div>
                   </div>
@@ -132,15 +137,13 @@
                 <div class="form-row">
                   <div class="col-md-6">
                     <div class="form-label-group">
-                      <input type="text" id="city" name="city" class="form-control" placeholder="City"
-                        required="required">
+                      <input type="text" id="city" name="city" class="form-control" placeholder="City" required="required">
                       <label for="city">City</label>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-label-group">
-                      <input type="text" id="street" name="street" class="form-control" placeholder="Street"
-                        required="required">
+                      <input type="text" id="street" name="street" class="form-control" placeholder="Street" required="required">
                       <label for="street">Street</label>
                     </div>
                   </div>
@@ -150,15 +153,13 @@
                 <div class="form-row">
                   <div class="col-md-6">
                     <div class="form-label-group">
-                      <input type="tel" id="phone" name="txtEmpPhone" class="form-control" placeholder="Phone"
-                        required="required" data-error="Valid phone number is required.">
+                      <input type="tel" id="phone" name="txtEmpPhone" class="form-control" placeholder="Phone" required="required" data-error="Valid phone number is required.">
                       <label for="phone">Phone</label>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-label-group">
-                      <input type="email" id="email" name="email" class="form-control" placeholder="Email address"
-                        required="required" data-error="Valid email is required.">
+                      <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required="required" data-error="Valid email is required.">
                       <label for="email">Email address</label>
                     </div>
                   </div>
@@ -169,22 +170,26 @@
                 <div class="form-row">
                   <div class="col-md-6">
                     <div class="form-label-group">
-                      <input type="password" id="password" name="password" class="form-control" placeholder="Password"
-                        required="required">
+                      <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="required">
                       <label for="password">Password</label>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-label-group">
-                      <input type="password" id="repassword" name="passwordr" class="form-control"
-                        placeholder="Confirm password" required="required">
+                      <input type="password" id="repassword" name="passwordr" class="form-control" placeholder="Confirm password" required="required">
                       <label for="repassword">Confirm password</label>
                     </div>
                   </div>
                 </div>
               </div>
-              <button class="btn btn-primary btn-block" type="submit" id="register" name="submit">Add</button>
 
+              <button class="btn btn-primary btn-block" type="submit" id="register" name="submit">Add</button>
+              <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+  <label class="custom-control-label" for="customSwitch1">**Click to Add on map</label>
+</div>
+                
+              </div>
             </div>
           </div>
         </div>
@@ -211,8 +216,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -233,8 +237,22 @@
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="../js/auths.js"></script>
     <script src="../js/newuser.js"></script>
+
     <!-- Bootstrap core JavaScript-->
+
+    
     <script src="../vendor/jquery/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+$('#customSwitch1').on('change', function () {
+  function openinnewwindow(link){
+window.open(link)
+}
+openinnewwindow('../map/add-map.php');
+});
+});
+    
+    </script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
@@ -242,7 +260,6 @@
 
     <!-- Custom scripts for all pages-->
     <script src="../js/sb-admin.min.js"></script>
-
 
 </body>
 

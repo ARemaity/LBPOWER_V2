@@ -4,12 +4,6 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/master/LICENSE)
  */
 
-/*!
- * Bootstrap v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -1949,6 +1943,7 @@ pre code {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.075);
 }
+
 
 @media (max-width: 575.98px) {
   .table-responsive-sm {
