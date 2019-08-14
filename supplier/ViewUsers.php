@@ -2,6 +2,7 @@
 <?php
 session_start();
 include("../DBConnect.php");
+$result;
 ?>
 <html lang="en">
 

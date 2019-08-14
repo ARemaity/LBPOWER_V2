@@ -26,7 +26,7 @@ include("../DBConnect.php");
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>View Complaints</title>
+  <title>Edit User</title>
 
   <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -127,18 +127,14 @@ if(isset($_GET['submit'])){	//	page submitted
 	lname = '".$_GET['lname']."' ,
 	city = '".$_GET['city']."' , 
 	street = '".$_GET['street']."' , 
-	phone = '".$_GET['phone']."' ,
-	email = '".$_GET['email']."' 
+	phone = '".$_GET['phone']."'
 	where PID = ".$_GET['PID'];
 	$result = mysqli_query($connect,$sql);
 	
-	$sql2="update pass
-		   set email='".$_GET['email']."'
-		   where(select id from client where client.id=pass.SID and client.PID='".$_GET['PID']."')";
-	$result2 = mysqli_query($connect,$sql2);
+
 	//	If the sql returns an error
-	if(!$result || !$result2)
-			die("Something went wrong");
+	if(!$result)
+			die("Something went wrong 1");
 	else
 			echo "<script type='text/javascript'>alert('User Updated Successfully');</script>";
 			header("refresh:1;url=ViewUsers.php");
@@ -152,7 +148,7 @@ else{
 
 	//	If the sql returns an error
 	if(!$result)
-			die("something went wrong");
+			die("something went wrong 2");
 
 	
 	$row = mysqli_fetch_assoc($result);

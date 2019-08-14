@@ -50,7 +50,7 @@ $insert = mysqli_query($connect, " INSERT INTO person (role,fname,lname,city,str
    
 
     ///////////////////////
-   $base_url = "http://localhost/final/LBPOWER/";
+   $base_url = "http://localhost/lbp2/";
    $mail_body = "
    <p> Hi ".$_POST['fname']."</p>
    <p>Thanks for Registration. Your password is ".$user_password.", This password will work only after your email verification.</p>

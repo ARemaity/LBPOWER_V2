@@ -14,7 +14,7 @@ if(isset($_GET['activation_code']))
     $cum = mysqli_fetch_object($getdata);
     $emailStatus  = (int)$cum->status;
 
-    echo" the st is ".$emailStatus;
+   
   {
    if($emailStatus == '0'||$emailStatus == 0||$emailStatus == "0")
    {
