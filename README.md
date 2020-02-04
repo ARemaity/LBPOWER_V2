@@ -14,3 +14,4 @@ To Intall Web platform: 1.install xampp 2.download the project use gitbash 3.cop
 New Clone of LBPOWER System with plus feature:
 .ADD MAP (GOOGLE API)
 .overview to the project >>>>https://elated-kilby-9bafdd.netlify.com/
+.reward>>>>https://www.facebook.com/NouwatLb/photos/a.2861317023910953/3139067282802591/
